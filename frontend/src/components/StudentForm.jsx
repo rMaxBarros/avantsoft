@@ -43,9 +43,11 @@ function StudentForm() {
                 <input
                 className={styles.input}
                 type="number"
-                placeholder="Grade"
+                placeholder="Grade (0-10)"
                 value={grade}
                 onChange={(e) => setGrade(e.target.value)}
+                min={0}
+                max={10}
                 required
                 />
             <button type="submit">Submit</button>
