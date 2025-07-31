@@ -47,3 +47,5 @@ export class StudentsService {
     }
 
 }
+
+// The StudentsService provides methods to create, find all, and find a specific student by ID.
