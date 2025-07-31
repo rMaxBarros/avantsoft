@@ -1,12 +1,13 @@
-import { IsString, IsNumber, Min, Max} from 'class-validator';
+import { IsString, IsNumber, Min, Max, IsNotEmpty} from 'class-validator';
 
 export class CreateStudentDto {
     @IsString()
+    @IsNotEmpty({message: 'Name is required.'})
     name: string;
 
-    @IsNumber()
-    @Min(0)
-    @Max(10)
+    @IsNumber({}, {message: 'Grade must be a number.'})
+    @Min(0, {message: 'Grade must be at least 0.'})
+    @Max(10, {message: 'Grade must be at most 10.'})
     grade: number;
 }
 
