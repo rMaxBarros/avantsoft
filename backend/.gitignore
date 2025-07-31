@@ -1,0 +1,39 @@
+# Log files
+*.log
+npm-debug.log*
+
+# Module directories
+node_modules/
+
+# Build/Output Directories
+/dist/
+/build/
+/coverage/
+
+# Environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# IDE and Editor Information
+.vscode/       
+.vscode/*.log
+.vscode/*.txt
+.idea/          
+*.sublime-project
+*.sublime-workspace
+
+# Test Files
+*.ts.tsbuildinfo # Arquivos de cache de compilação do TypeScript
+
+# System files (Mac, Windows, Linux)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
