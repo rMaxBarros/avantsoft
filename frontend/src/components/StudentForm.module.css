@@ -8,9 +8,9 @@
 }
 
 .inputSection {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 input, button {
@@ -40,4 +40,10 @@ button:hover {
   background-color: #2a2a2a;
   color: #fff;
   min-width: 200px;
+}
+
+@media (max-width: 600px) {
+  .inputSection {
+    flex-direction: column;
+  }
 }
