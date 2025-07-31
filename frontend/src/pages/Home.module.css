@@ -8,3 +8,9 @@
 .mainContent h1 {
     margin-bottom: 1rem;
 }
+
+.title {
+    color: #30AD98;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}

@@ -7,7 +7,7 @@ function Home() {
         <div>
             <Header />
             <section className={styles.mainContent}>
-                <h1>Register the Student's name and grade below</h1>
+                <h1 className={styles.title}>Register the Student's name and grade below</h1>
                 <StudentForm />
             </section>
         </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import axios from 'axios';
 import Modal from "./Modal";
 import styles from './StudentForm.module.css';
+import api from '../api';
 
 function StudentForm() {
     const [name, setName] = useState('');
@@ -13,7 +13,7 @@ function StudentForm() {
         e.preventDefault();
 
         try {
-            await axios.post('http://172.27.245.226:3000/students', {
+            await api.post('/students', {
                 name,
                 grade: Number(grade),
             });
@@ -33,6 +33,7 @@ function StudentForm() {
         <form onSubmit={handleSubmit} classNam={styles.form}>
             <section className={styles.inputSection}>
                 <input 
+                className={styles.input}
                 type="text"
                 placeholder="Student Name"
                 value={name}
@@ -40,6 +41,7 @@ function StudentForm() {
                 required
                 />
                 <input
+                className={styles.input}
                 type="number"
                 placeholder="Grade"
                 value={grade}
