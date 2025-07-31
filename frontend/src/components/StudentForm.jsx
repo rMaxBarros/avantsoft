@@ -13,7 +13,7 @@ function StudentForm() {
         e.preventDefault();
 
         try {
-            await axios.post('http://localhost:3000/students', {
+            await axios.post('http://172.27.245.226:3000/students', {
                 name,
                 grade: Number(grade),
             });
