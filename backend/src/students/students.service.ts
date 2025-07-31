@@ -7,6 +7,7 @@ export class StudentsService {
     private students: Student[] = [];
     private nextId = 1;
 
+    // Creates a new student and returns the created student object.
     create(CreateStudentDto: CreateStudentDto): Student {
         const newStudent: Student = {
             id: this.nextId++,
@@ -16,6 +17,7 @@ export class StudentsService {
         return newStudent;
     }
 
+    // Returns all students with a unique letter from their name.
     findAll(): (Student & {uniqueLetter: string})[] {
         return this.students.map(student => ({
             ...student,
@@ -23,6 +25,7 @@ export class StudentsService {
         }));
     }
 
+    // Returns a student by ID along with a unique letter from their name.
     findOne(id: number): Student & {uniqueLetter: string}{
         const student = this.students.find(s => s.id === id);
         if(!student) {
@@ -34,6 +37,7 @@ export class StudentsService {
         };
     }
 
+    // Helper function to find a unique letter in the student's name.
     private getUniqueLetter(name: string): string {
         const lowercase = name.toLowerCase();
         const letterCount: Record<string, number> = {};
