@@ -1,10 +1,15 @@
 import Header from "../components/Header";
+import StudentForm from "../components/StudentForm";
+import styles from './Home.module.css';
 
 function Home() {
     return (
         <div>
             <Header />
-            <h1>Home Page - Welcome to the Student Management System</h1>
+            <section className={styles.mainContent}>
+                <h1>Register the Student's name and grade below</h1>
+                <StudentForm />
+            </section>
         </div>
     );
 }
