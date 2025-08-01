@@ -80,7 +80,7 @@ npm run dev
 
 ⚠️ Se não estiver utilizando Linux, substitua por `localhost`.
 
-⚠️ Se estiver usando **Ubuntu no WSL**, mas que verificar seu IP local para colocar no arquivo `frontend/src/api.js`, siga o comando abaixo:
+⚠️ Se estiver usando **Ubuntu no WSL**, mas deseja verificar seu IP local para colocar no arquivo `frontend/src/api.js`, siga o comando abaixo:
 
 Para descobrir seu IP local (WSL):
 
